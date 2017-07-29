@@ -1,0 +1,46 @@
+.login-and-sign{
+	box-sizing: border-box;
+	width: 600px;
+	padding-bottom: 20px;
+	border: 1px solid #404040;
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 1001;
+	background-color: #fff;
+
+	.close{
+		box-sizing: border-box;
+		text-align: right;
+
+		span{
+			display: inline-block;
+			padding: 10px;
+			font-size: 15px;
+			cursor: pointer;
+		}
+
+		span:hover{
+			color: #ff0000;
+		}
+	}
+	
+	.nav{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px 0;
+		text-align: center;
+		
+		span{
+			font-size: 20px;
+			margin: 0 20px;
+			cursor: pointer;
+		}
+
+		span:hover,
+		span.active{
+			color: #3333ff;
+		}
+	}
+}

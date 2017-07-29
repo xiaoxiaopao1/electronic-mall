@@ -1,1 +1,1 @@
-export const CITYNAME = 'USER_CURRENT_CITY_NAME'
+export const USERINFO = 'USER_CURRENT';

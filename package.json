@@ -46,6 +46,7 @@
     "es6-promise": "^3.2.1",
     "immutable": "^3.8.1",
     "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
     "koa-router": "^7.2.1",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.1",

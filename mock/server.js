@@ -7,6 +7,8 @@ const Koa = require('koa'),
       poster = require('./poster/poster'),
       product = require('./product/product');
 
+let search = require('./search/search');
+
 app.use(koaBody({multipart: true}));  
 
 //用户信息
@@ -23,6 +25,27 @@ router.post('/api/sign', async (ctx) => {
 		msg: 'success'
 	}
 })
+
+// 接收搜索框关键字
+
+let searchResult = [];
+router.post('/api/searchPost', async (ctx) => {
+  const keyword = ctx.request.body.keyword;
+  const findResult = await product.filter(item => {
+    return keyword == item.title;
+  })
+  searchResult = findResult;
+  ctx.body = {
+    errno: 0,
+    msg: 'success'
+  }
+})
+
+router.get('/api/search', async (ctx) => {
+  console.log(searchResult);
+  ctx.body = searchResult;
+})
+
 
 // 海报图信息
 router.get('/api/poster', async (ctx) => {

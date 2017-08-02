@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import LoginHeader from './subpage/LoginHeader';
 import LoginAndSign from './subpage/LoginAndSign';
 import Swiper from './subpage/Swiper';
+import SearchHeader from '../../components/SearchHeader'
 import Product from './subpage/Product';
 
 class Home extends React.Component {
@@ -25,6 +26,7 @@ class Home extends React.Component {
 					: ''
 				}
 				<Swiper />
+				<SearchHeader />
 				<Product />
 			</div>
 		)

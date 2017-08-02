@@ -16,7 +16,6 @@ class Search extends React.Component {
 		}
 	}
 	render(){
-		console.log(this.state.data);
 		return(
 			<div>
 				<SearchHeader />
@@ -56,9 +55,6 @@ class Search extends React.Component {
 					const re = new RegExp(iitem,'i');
 					return re.test(item.title);
 				})
-
-
-				
 			})
 			if (!data.length) {
 				this.setState({

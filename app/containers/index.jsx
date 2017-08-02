@@ -5,6 +5,8 @@ import { STORE,USERINFO } from '../config/localStoreKey';//里面有userinfo常�
 import { bindActionCreators } from 'redux'; //redux自带的发起action方法
 import { connect } from 'react-redux'; //连接redux
 import * as userInfoActionsFormOtherFile from '../actions/userinfo'
+
+import Header from './Header';
 // 绑定用户信息行为的一系列action
 class App extends React.Component {
 	constructor(props,context){
@@ -20,7 +22,10 @@ class App extends React.Component {
 			<div>
 				{
 					this.state.initDone
-					? this.props.children
+					? <div>
+						<Header />
+						{this.props.children}
+					  </div>
 					: <div>加载中</div>
 				}
 			</div>
@@ -43,6 +48,7 @@ class App extends React.Component {
 					store: store
 				})
 			}
+			//此处的store属性需要考虑下
 		}
 
 		// App初始化完成

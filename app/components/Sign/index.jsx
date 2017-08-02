@@ -23,7 +23,7 @@ class Sign extends React.Component {
 			  emailInputStyle = this.state.emailErr ? {border: '1px solid #ff0000'} : {},
 			  emailMarkStyle = this.state.emailErr ? {visibility: 'visible'} : {},
 			  telInputStyle = this.state.telErr ? {border: '1px solid #ff0000'} : {},
-			  telMarkStyle = this.state.telErr ? {visibility: 'visible'} : {}
+			  telMarkStyle = this.state.telErr ? {visibility: 'visible'} : {};
 		return(
 			<div className='sign'>
 				<h2>用户名</h2>
